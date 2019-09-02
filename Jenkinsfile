@@ -20,6 +20,11 @@ ls'''
     }
     stage('mvn') {
       steps {
+        sh 'ls'
+      }
+    }
+    stage('m') {
+      steps {
         sh 'mvn -B -DskipTests clean package'
       }
     }
