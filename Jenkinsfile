@@ -9,7 +9,8 @@ pipeline {
   stages {
     stage('stages') {
       steps {
-        sh 'mvn -B -DskipTests clean package'
+        sh '''
+cd eureka & mvn -B -DskipTests clean package'''
       }
     }
   }
