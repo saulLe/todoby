@@ -7,13 +7,18 @@ pipeline {
 
   }
   stages {
-    stage('stages') {
+    stage('ls') {
       steps {
         sh '''
 ls'''
       }
     }
-    stage('mavn') {
+    stage('cd') {
+      steps {
+        sh 'cd eureka'
+      }
+    }
+    stage('mvn') {
       steps {
         sh 'mvn -B -DskipTests clean package'
       }
