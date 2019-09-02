@@ -10,7 +10,7 @@ pipeline {
     stage('stages') {
       steps {
         sh '''
-cd eureka'''
+ls'''
       }
     }
     stage('mavn') {
