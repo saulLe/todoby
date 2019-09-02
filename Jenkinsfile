@@ -10,7 +10,12 @@ pipeline {
     stage('stages') {
       steps {
         sh '''
-cd eureka & mvn -B -DskipTests clean package'''
+cd eureka'''
+      }
+    }
+    stage('mavn') {
+      steps {
+        sh 'mvn -B -DskipTests clean package'
       }
     }
   }
